@@ -1,6 +1,8 @@
 .whole-container{
-    width: 1500px;
-	height: 690;
+    width: 1536px;
+    height: 713px;
+    background-color: grey;
+    overflow: hidden;
     .form-content{
         background-color: #fff;
         display: flex;
@@ -74,25 +76,25 @@
                 background-color: transparent;
             }
             .name-lable{
-                padding-right: 65px;
+                padding-right: 60px;
             }
             .mobile-number-lable{
-                padding-right: 10px;
+                padding-right: 6px;
             }
             .date-of-birth-lable{
                 padding-right: 18px;
             }
             .emailId-lable{
-                padding-right: 54px;
+                padding-right: 52px;
             }
             .password-lable{
-                padding-right: 45px;
+                padding-right: 37px;
             }
             .interest-lable{
-                padding-right: 60px;
+                padding-right: 52px;
             }
             .location-lable{
-                padding-right: 50px;
+                padding-right: 45px;
             }
             .loginInstead{
                 font-size: 16pt;

@@ -1,41 +1,41 @@
 <div class="whole-container">
     <div class="form-content">
-        <form action="">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmitted()">
             <div class="form-head">Social Directory Application</div>
             <div class="row-content">
                 <label class="name-lable" for="Name">Name</label>
-                <input class="input" type="text" id="Name" name="Name" required>
+                <input class="input" type="text" id="Name" name="Name" required formControlName="name">
             </div>
             <div class="row-content">
                 <label class="label text" for="Gender">Gender</label>
-                <input class="input-radio-1" type="radio" id="Male" name="Gender" value="Male">
+                <input class="input-radio-1" type="radio" id="Male" name="gender" value="Male" formControlName="gender">
                 <label class="gender-label-text-1" for="Male">Male</label>
-                <input class="input-radio-2" type="radio" id="Female" name="Gender" value="Female">
+                <input class="input-radio-2" type="radio" id="Female" name="gender" value="Female" formControlName="gender">
                 <label class="gender-label-text-2" for="Female">Female</label>
             </div>
             <div class="row-content">
                 <label class="date-of-birth-lable" for="DateOfBirth">Date Of Birth</label>
-                <input class="date-input" type="date" id="DateOfBirth" name="DateOfBirth">
+                <input class="date-input" type="date" id="DateOfBirth" name="DateOfBirth" formControlName="dateOfBirth">
             </div>
             <div class="row-content">
                 <label class="emailId-lable" for="EmailId">EmailId</label>
-                <input class="input" type="text" id="EmailId" name="EmailId" required>
+                <input class="input" type="text" id="EmailId" name="EmailId" required formControlName="emailId">
             </div>
             <div class="row-content">
                 <label class="password-lable" for="Password">Password</label>
-                <input class="input" type="text" id="Password" name="Password" required>
+                <input class="input" type="text" id="Password" name="Password" required formControlName="password">
             </div>
             <div class="row-content">
                 <label class="mobile-number-lable" for="MobileNumber">MobileNumber</label>
-                <input class="input" type="text" id="MobileNumber" name="MobileNumber" required>
+                <input class="input" type="text" id="MobileNumber" name="MobileNumber" required formControlName="mobileNumber">
             </div>
             <div class="row-content">
                 <label class="interest-lable" for="Interest">Interest</label>
-                <input class="input" type="text" id="Interest" name="Interest" required>
+                <input class="input" type="text" id="Interest" name="Interest" required formControlName="interest">
             </div>
             <div class="row-content">
                 <label class="location-lable" for="Location">Location</label>
-                <input class="input" type="text" id="Location" name="Location" required>
+                <input class="input" type="text" id="Location" name="Location" required formControlName="location">
             </div>
             <div class="row-content">
                 <span class="loginInstead">Login Instead</span>
