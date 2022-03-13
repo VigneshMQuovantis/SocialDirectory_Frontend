@@ -1,0 +1,20 @@
+<div class="whole-container">
+    <div class="form-content">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmitted()">
+            <div class="form-head">Social Directory Application</div>
+            <div class="row-content">
+                <label class="emailId-lable" for="EmailId">EmailId</label>
+                <input class="input" type="text" id="EmailId" name="EmailId" required formControlName="emailId">
+            </div>
+            <div class="row-content">
+                <label class="password-lable" for="Password">Password</label>
+                <input class="input" type="password" id="Password" name="Password" required formControlName="password">
+            </div>
+            <div class="row-content">
+                <span class="createAccount" routerLink='/register'>Create Account</span>
+                <button type="submit" class="loginButton" id="loginButton">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+

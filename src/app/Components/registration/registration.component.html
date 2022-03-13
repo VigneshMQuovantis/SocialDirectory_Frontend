@@ -23,7 +23,7 @@
             </div>
             <div class="row-content">
                 <label class="password-lable" for="Password">Password</label>
-                <input class="input" type="text" id="Password" name="Password" required formControlName="password">
+                <input class="input" type="password" id="Password" name="Password" required formControlName="password">
             </div>
             <div class="row-content">
                 <label class="mobile-number-lable" for="MobileNumber">MobileNumber</label>
@@ -38,7 +38,7 @@
                 <input class="input" type="text" id="Location" name="Location" required formControlName="location">
             </div>
             <div class="row-content">
-                <span class="loginInstead">Login Instead</span>
+                <span class="loginInstead" routerLink='/login'>Login Instead</span>
                 <button type="submit" class="registerButton" id="registerButton">Register</button>
             </div>
         </form>
