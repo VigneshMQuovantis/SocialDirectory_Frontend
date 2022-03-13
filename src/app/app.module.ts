@@ -7,16 +7,21 @@ import { RegistrationComponent } from './Components/registration/registration.co
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './Components/login/login.component';
+import { HomeComponent } from './Components/home/home.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,
-    FormsModule,ReactiveFormsModule, BrowserAnimationsModule,AppRoutingModule
+    FormsModule,ReactiveFormsModule, BrowserAnimationsModule,AppRoutingModule,
+    MatIconModule,MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,51 @@
+.top-bar{
+    display: flex;
+    width: 1536px;
+    height: 60px;
+    flex-direction: row;
+    background-color: #04849e;
+    .header-content{
+        font: normal normal bold 24px/37px Roboto;
+        color: #fff;
+        padding-top: 12px;
+        padding-bottom: 10px;
+        padding-left: 50px;
+    }
+    .searchContent{
+        margin-top: -7px;
+        display: flex;
+        .searchBox { 
+            width: 360px;
+            height: 33px;
+            background-color: #FFFFFF;
+            border-radius: 3px;
+            opacity: 1;
+            border: none;
+            margin-top: 20px;
+            margin-bottom: 13px;
+            padding-left: 35px;
+            margin-left: 85px;
+		}
+        .searchIconSearchBox{
+            margin-top: 25px; 
+            transform: translateX(115px);
+            opacity: 0.4;
+        }
+        input:focus{
+            outline: none;
+        }
+        .arrowIcon{
+            margin-top: 22px;
+            transform: translateX(-38px);
+            font-size: 25pt;
+            color: #04849e;
+            cursor: pointer;
+        }
+        .topBarIconContent{
+            margin-top: 25px;
+            color: #fff;
+            margin-left: 90px;
+            cursor: pointer;
+        }
+    }
+}

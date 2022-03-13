@@ -1,0 +1,15 @@
+<div class="top-bar">
+    <span class="header-content">Social Directory Application</span>
+    <form class="searchContent" [formGroup]="searchContactForm" (ngSubmit)="onSubmitted()">
+        <div class="searchIconSearchBox"><mat-icon>search</mat-icon></div>
+        <input class="searchBox" placeholder="Search by name,date of birth,gender,location,interest" formControlName="searchContact">
+        <mat-icon class="arrowIcon" (click)="onSubmitted()">arrow_right_alt</mat-icon>
+    </form>
+    <div class="searchContent">
+        <mat-icon class="topBarIconContent" matTooltip="Home">home</mat-icon>
+        <mat-icon class="topBarIconContent" matTooltip="My Profile">account_circle</mat-icon>
+        <mat-icon class="topBarIconContent" matTooltip="My Contacts"> contacts</mat-icon>
+        <mat-icon class="topBarIconContent" matTooltip="Notification">notification_important</mat-icon>
+        <mat-icon class="topBarIconContent" matTooltip="Logout">logout</mat-icon>
+    </div>
+</div>
