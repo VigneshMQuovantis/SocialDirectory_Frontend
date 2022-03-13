@@ -1,0 +1,121 @@
+.whole-container{
+    width: 1500px;
+	height: 690;
+    .form-content{
+        background-color: #fff;
+        display: flex;
+        padding-top: 5px;
+        border: 1px solid #000000;
+        width: 500px;
+        height: 520px;
+        border-radius: 5px;
+        margin-top: 100px;
+        margin-left: 500px;
+        .form-head{
+            font: normal normal bold 24px/37px Roboto;
+            letter-spacing: 0px;
+            color: #04849e;
+            text-transform: capitalize;
+            opacity: 1;
+            padding-bottom: 20px;
+            padding-left: 110px;
+        }
+        .row-content{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+            align-items: center;
+            margin-left: 30px;
+            width: 435px;
+            .text{
+                font-size: 16px;
+                color: #42515f;
+                opacity: 1;
+                font-family: vertical;
+            }
+            .input{
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                resize: vertical;
+            }
+            .gender-label-text-1{
+                transform: translateX(-70px);
+            }
+            .gender-label-text-2{
+                transform: translateX(-130px);
+            }
+            .input-radio-1{
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                resize: vertical;
+                transform: translateX(-17px);
+            }
+            .input-radio-2{
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                resize: vertical;
+                transform: translateX(-80px);
+            }
+            .date-input{
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            input[type='date']
+            {
+                font: normal normal normal 16px Roboto;
+                color: #42515f;
+                background-color: transparent;
+            }
+            .name-lable{
+                padding-right: 65px;
+            }
+            .mobile-number-lable{
+                padding-right: 10px;
+            }
+            .date-of-birth-lable{
+                padding-right: 18px;
+            }
+            .emailId-lable{
+                padding-right: 54px;
+            }
+            .password-lable{
+                padding-right: 45px;
+            }
+            .interest-lable{
+                padding-right: 60px;
+            }
+            .location-lable{
+                padding-right: 50px;
+            }
+            .loginInstead{
+                font-size: 16pt;
+                color: #04849e;
+                cursor: pointer;
+                margin-left: 80px;
+                margin-top: 5px;
+            }
+            .loginInstead:active{
+                text-decoration: underline;
+                color: #04849e;
+            }
+            .registerButton{
+                margin-top: 8px;
+                background-color: #04849e;
+                width: 100px;
+                height: 35px;
+                border: none;
+                border-radius: 3px;
+                color: #fff;
+                margin-left: 80px;
+                cursor: pointer;
+            }
+        }
+    }
+}
