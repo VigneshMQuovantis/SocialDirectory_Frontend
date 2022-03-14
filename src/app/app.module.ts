@@ -12,6 +12,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { GetAllContactsComponent } from './Components/get-all-contacts/get-all-contacts.component';
 import { MyProfileComponent } from './Components/my-profile/my-profile.component';
+import { SearchedContactsComponent } from './Components/searched-contacts/searched-contacts.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MyProfileComponent } from './Components/my-profile/my-profile.component
     LoginComponent,
     HomeComponent,
     GetAllContactsComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    SearchedContactsComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,

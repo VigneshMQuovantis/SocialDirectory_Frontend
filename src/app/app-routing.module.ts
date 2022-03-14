@@ -5,6 +5,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { HomeComponent } from './Components/home/home.component';
 import { GetAllContactsComponent } from './Components/get-all-contacts/get-all-contacts.component';
 import { MyProfileComponent } from './Components/my-profile/my-profile.component';
+import { SearchedContactsComponent } from './Components/searched-contacts/searched-contacts.component';
 
 const routes: Routes = [
   {path: '',   redirectTo: '/login', pathMatch: 'full'},
@@ -15,6 +16,7 @@ const routes: Routes = [
     {path:'', redirectTo:"/home/contacts", pathMatch:'full' },
     {path:'contacts', component:GetAllContactsComponent},
     {path:'myProfile', component:MyProfileComponent},
+    {path:'searchedContacts', component:SearchedContactsComponent},
 ]}
 ];
 

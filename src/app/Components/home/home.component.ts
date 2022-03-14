@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ContactService } from 'src/app/Services/ContactServices/contact.service';
+import { DataServicesService } from 'src/app/Services/DataServices/data.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,8 @@ export class HomeComponent implements OnInit {
   searchBoxSwitch : boolean=true;
   searchContactForm!:FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder,private contactService:ContactService,private route:Router) { }
+  constructor(private formBuilder: FormBuilder,private contactService:ContactService,private route:Router,
+    private dataServices:DataServicesService) { }
 
   ngOnInit(): void {
     this.searchContactForm = this.formBuilder.group({
@@ -33,6 +35,8 @@ export class HomeComponent implements OnInit {
       }
       this.contactService.searchContact(requestData).subscribe((response:any)=>{
         console.log(response)
+        this.dataServices.sendData(response.contacts)
+        this.route.navigateByUrl('/home/searchedContacts')
       })
     }
     else

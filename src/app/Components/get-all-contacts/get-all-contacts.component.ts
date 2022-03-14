@@ -12,10 +12,11 @@ export class GetAllContactsComponent implements OnInit {
   constructor(private contactService:ContactService) { }
 
   ngOnInit(): void {
+    this.token=localStorage.getItem('token')
     this.getAllContacts()
   }
   getAllContacts() { 
-    this.contactService.getAllContacts().subscribe((response:any)=>{
+    this.contactService.getAllContacts(this.token).subscribe((response:any)=>{
       this.contactList= response.contacts
       console.log(this.contactList);
     })

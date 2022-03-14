@@ -1,0 +1,14 @@
+<div class="whole-container">
+    <div class="headerContent"><span class="home" routerLink="/home/contacts">Home</span>/Searched Contacts</div>
+    <div class="display-contact">
+        <div class="contact-container" *ngFor="let response of searchContactList">
+            <div class="iconContainer"><mat-icon class="personIcon">person_outline</mat-icon></div>
+            <div class="name">{{response.name}}</div>
+            <div class="location">Location: {{response.location}}</div>
+            <div class="footer-buttons">
+                <button class="viewContact">View Contact</button>
+                <button class="addContact">Add Contact</button>
+            </div>
+        </div>
+    </div>
+</div>

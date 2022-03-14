@@ -19,14 +19,15 @@ export class ContactService {
     return this.httpService.getRequest('/ContactDetails/'+data.searchParameters,false,header);
   }
 
-  getAllContacts()
+  getAllContacts(token:any)
   {
     let header={
       headers:new HttpHeaders({
         'Content-Type': 'application/json-patch+json',
+        Authorization: 'Bearer '+ token
       })
     }
-    return this.httpService.getRequest('/ContactDetails/allContacts',false,header);
+    return this.httpService.getRequest('/ContactDetails/allContacts',true,header);
   }
 
   myProfile(token:any)
