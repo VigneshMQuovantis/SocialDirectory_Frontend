@@ -44,4 +44,9 @@ export class HomeComponent implements OnInit {
     else
     console.log("invalid");
   }
+  logout(){
+    localStorage.removeItem('token')
+    localStorage.removeItem('viewPersonContactId')
+    this.route.navigateByUrl('/login')
+  }
 }

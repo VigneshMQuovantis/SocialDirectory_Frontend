@@ -15,6 +15,7 @@ import { MyProfileComponent } from './Components/my-profile/my-profile.component
 import { SearchedContactsComponent } from './Components/searched-contacts/searched-contacts.component';
 import { ViewComponentComponent } from './Components/view-component/view-component.component';
 import { MyContactComponent } from './Components/my-contact/my-contact.component';
+import { AuthenticationGuard } from './Components/authentication.guard';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { MyContactComponent } from './Components/my-contact/my-contact.component
     FormsModule,ReactiveFormsModule, BrowserAnimationsModule,AppRoutingModule,
     MatIconModule,MatTooltipModule
   ],
-  providers: [],
+  providers: [AuthenticationGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

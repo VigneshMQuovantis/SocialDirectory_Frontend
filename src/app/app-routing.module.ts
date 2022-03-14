@@ -8,12 +8,13 @@ import { MyProfileComponent } from './Components/my-profile/my-profile.component
 import { SearchedContactsComponent } from './Components/searched-contacts/searched-contacts.component';
 import { ViewComponentComponent } from './Components/view-component/view-component.component';
 import { MyContactComponent } from './Components/my-contact/my-contact.component';
+import { AuthenticationGuard } from './Components/authentication.guard';
 
 const routes: Routes = [
   {path: '',   redirectTo: '/login', pathMatch: 'full'},
   {path:'register',component:RegistrationComponent},
   {path:'login',component:LoginComponent},
-  {path:'home',component:HomeComponent,
+  {path:'home',component:HomeComponent,canActivate:[AuthenticationGuard],
   children:[
     {path:'', redirectTo:"/home/contacts", pathMatch:'full' },
     {path:'contacts', component:GetAllContactsComponent},
