@@ -28,4 +28,15 @@ export class ContactService {
     }
     return this.httpService.getRequest('/ContactDetails/allContacts',false,header);
   }
+
+  myProfile(token:any)
+  {
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization: 'Bearer '+ token
+      })
+    }
+    return this.httpService.getRequest('/User/myProfile',true,header);
+  }
 }

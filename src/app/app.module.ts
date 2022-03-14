@@ -11,6 +11,7 @@ import { HomeComponent } from './Components/home/home.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { GetAllContactsComponent } from './Components/get-all-contacts/get-all-contacts.component';
+import { MyProfileComponent } from './Components/my-profile/my-profile.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GetAllContactsComponent } from './Components/get-all-contacts/get-all-c
     RegistrationComponent,
     LoginComponent,
     HomeComponent,
-    GetAllContactsComponent
+    GetAllContactsComponent,
+    MyProfileComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,

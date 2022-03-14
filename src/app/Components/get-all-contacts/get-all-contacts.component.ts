@@ -12,9 +12,9 @@ export class GetAllContactsComponent implements OnInit {
   constructor(private contactService:ContactService) { }
 
   ngOnInit(): void {
-    this.getAllBook()
+    this.getAllContacts()
   }
-  getAllBook() { 
+  getAllContacts() { 
     this.contactService.getAllContacts().subscribe((response:any)=>{
       this.contactList= response.contacts
       console.log(this.contactList);

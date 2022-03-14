@@ -4,6 +4,7 @@ import { RegistrationComponent } from './Components/registration/registration.co
 import { LoginComponent } from './Components/login/login.component';
 import { HomeComponent } from './Components/home/home.component';
 import { GetAllContactsComponent } from './Components/get-all-contacts/get-all-contacts.component';
+import { MyProfileComponent } from './Components/my-profile/my-profile.component';
 
 const routes: Routes = [
   {path: '',   redirectTo: '/login', pathMatch: 'full'},
@@ -13,6 +14,7 @@ const routes: Routes = [
   children:[
     {path:'', redirectTo:"/home/contacts", pathMatch:'full' },
     {path:'contacts', component:GetAllContactsComponent},
+    {path:'myProfile', component:MyProfileComponent},
 ]}
 ];
 
