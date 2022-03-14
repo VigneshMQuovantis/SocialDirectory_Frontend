@@ -1,0 +1,20 @@
+<div class="whole-container">
+    <div class="headerContent"><span class="home" routerLink="/home/contacts">Home</span>/View Contact</div>
+    <div class="display-contact">
+        <div class="contact-container">
+            <div class="iconContainer">
+                <mat-icon class="personIcon">person_outline</mat-icon>
+                <button class="addContact">Add Contact</button>
+            </div>
+            <div class="contact-contents">
+                <div class="name">Name<span>: {{viewedContacts?.name}}</span></div>
+                <div class="dateOfBirth">Date of Birth<span>: {{viewedContacts?.dateOfBirth}}</span></div>
+                <div class="gender">Gender<span>: {{viewedContacts?.gender}}</span></div>
+                <div class="emailId">EmailId<span>: {{viewedContacts?.emailId}}</span></div>
+                <div class="mobileNumber">Mobile Number<span>: {{viewedContacts?.mobileNumber}}</span></div>
+                <div class="interest">Interest<span>: {{viewedContacts?.interest}}</span></div>
+                <div class="location">Location<span>: {{viewedContacts?.location}}</span></div>
+            </div>
+        </div>
+    </div>
+</div>

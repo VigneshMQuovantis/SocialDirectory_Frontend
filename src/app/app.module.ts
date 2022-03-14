@@ -13,6 +13,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { GetAllContactsComponent } from './Components/get-all-contacts/get-all-contacts.component';
 import { MyProfileComponent } from './Components/my-profile/my-profile.component';
 import { SearchedContactsComponent } from './Components/searched-contacts/searched-contacts.component';
+import { ViewComponentComponent } from './Components/view-component/view-component.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SearchedContactsComponent } from './Components/searched-contacts/search
     HomeComponent,
     GetAllContactsComponent,
     MyProfileComponent,
-    SearchedContactsComponent
+    SearchedContactsComponent,
+    ViewComponentComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,

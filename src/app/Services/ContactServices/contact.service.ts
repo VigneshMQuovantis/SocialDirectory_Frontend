@@ -9,14 +9,15 @@ import { ActivatedRoute } from '@angular/router';
 export class ContactService {
 
   constructor(private httpService:HttpService,private activatedRoute:ActivatedRoute) { }
-  searchContact(data:any)
+  searchContact(data:any,token:any)
   {
     let header={
       headers:new HttpHeaders({
         'Content-Type': 'application/json-patch+json',
+        Authorization: 'Bearer '+ token
       })
     }
-    return this.httpService.getRequest('/ContactDetails/'+data.searchParameters,false,header);
+    return this.httpService.getRequest('/ContactDetails/'+data.searchParameters,true,header);
   }
 
   getAllContacts(token:any)

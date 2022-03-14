@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactService } from 'src/app/Services/ContactServices/contact.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-get-all-contacts',
@@ -9,7 +10,7 @@ import { ContactService } from 'src/app/Services/ContactServices/contact.service
 export class GetAllContactsComponent implements OnInit {
   token:any;
   contactList:any;
-  constructor(private contactService:ContactService) { }
+  constructor(private contactService:ContactService,private route:Router) { }
 
   ngOnInit(): void {
     this.token=localStorage.getItem('token')
@@ -21,4 +22,10 @@ export class GetAllContactsComponent implements OnInit {
       console.log(this.contactList);
     })
     } 
+
+    viewContact(contactResponse:any){
+      localStorage.setItem('viewPersonContactId', contactResponse.userId);
+      console.log("viewPersonContactId", contactResponse.userId);
+      this.route.navigateByUrl('/home/viewContacts/' + contactResponse.userId)
+    }
 }

@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   searchBoxSwitch : boolean=true;
   searchContactForm!:FormGroup;
   submitted = false;
+  token:any;
   constructor(private formBuilder: FormBuilder,private contactService:ContactService,private route:Router,
     private dataServices:DataServicesService) { }
 
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit {
     this.searchContactForm = this.formBuilder.group({
       searchContact: ['', Validators.required],
     });
+    this.token=localStorage.getItem('token')
   }
   searchBoxSwap() {
     console.log(this.searchBoxSwitch);
@@ -33,7 +35,7 @@ export class HomeComponent implements OnInit {
       let requestData={
         searchParameters:this.searchContactForm.value.searchContact
       }
-      this.contactService.searchContact(requestData).subscribe((response:any)=>{
+      this.contactService.searchContact(requestData,this.token).subscribe((response:any)=>{
         console.log(response)
         this.dataServices.sendData(response.contacts)
         this.route.navigateByUrl('/home/searchedContacts')
