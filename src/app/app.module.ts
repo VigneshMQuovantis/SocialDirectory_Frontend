@@ -10,13 +10,15 @@ import { LoginComponent } from './Components/login/login.component';
 import { HomeComponent } from './Components/home/home.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { GetAllContactsComponent } from './Components/get-all-contacts/get-all-contacts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    GetAllContactsComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,

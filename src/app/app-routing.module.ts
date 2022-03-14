@@ -3,12 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegistrationComponent } from './Components/registration/registration.component';
 import { LoginComponent } from './Components/login/login.component';
 import { HomeComponent } from './Components/home/home.component';
+import { GetAllContactsComponent } from './Components/get-all-contacts/get-all-contacts.component';
 
 const routes: Routes = [
-  //{path: '',   redirectTo: '/login', pathMatch: 'full'},
+  {path: '',   redirectTo: '/login', pathMatch: 'full'},
   {path:'register',component:RegistrationComponent},
   {path:'login',component:LoginComponent},
-  {path:'home',component:HomeComponent}
+  {path:'home',component:HomeComponent,
+  children:[
+    {path:'', redirectTo:"/home/contacts", pathMatch:'full' },
+    {path:'contacts', component:GetAllContactsComponent},
+]}
 ];
 
 @NgModule({

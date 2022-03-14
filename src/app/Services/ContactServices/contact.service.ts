@@ -18,4 +18,14 @@ export class ContactService {
     }
     return this.httpService.getRequest('/ContactDetails/'+data.searchParameters,false,header);
   }
+
+  getAllContacts()
+  {
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+      })
+    }
+    return this.httpService.getRequest('/ContactDetails/allContacts',false,header);
+  }
 }

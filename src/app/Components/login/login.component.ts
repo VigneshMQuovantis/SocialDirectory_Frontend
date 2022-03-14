@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
       this.accountService.login(requestData).subscribe((response:any)=>{
         console.log(response)
         localStorage.setItem('token',response.credentials.jwtToken)
+        this.route.navigateByUrl('/home')
       })
     }
     else
