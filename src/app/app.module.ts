@@ -14,6 +14,7 @@ import { GetAllContactsComponent } from './Components/get-all-contacts/get-all-c
 import { MyProfileComponent } from './Components/my-profile/my-profile.component';
 import { SearchedContactsComponent } from './Components/searched-contacts/searched-contacts.component';
 import { ViewComponentComponent } from './Components/view-component/view-component.component';
+import { MyContactComponent } from './Components/my-contact/my-contact.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ViewComponentComponent } from './Components/view-component/view-compone
     GetAllContactsComponent,
     MyProfileComponent,
     SearchedContactsComponent,
-    ViewComponentComponent
+    ViewComponentComponent,
+    MyContactComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,

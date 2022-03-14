@@ -41,4 +41,38 @@ export class ContactService {
     }
     return this.httpService.getRequest('/User/myProfile',true,header);
   }
+
+  myContactLisr(token:any)
+  {
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization: 'Bearer '+ token
+      })
+    }
+    return this.httpService.getRequest('/MyContact/contactsOfUser',true,header);
+  }
+
+  deleteContact(data:any,token:any)
+  {
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization:'Bearer '+ token
+        
+      })
+    }
+    return this.httpService.deleteRequest('/MyContact/'+data,true,header);
+  }
+
+  addBookToWishList(data:any,token:any)
+  {
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization: 'Bearer '+ token
+      })
+    }
+    return this.httpService.postRequest('/MyContact/'+data,false,true,header);
+  }
 }

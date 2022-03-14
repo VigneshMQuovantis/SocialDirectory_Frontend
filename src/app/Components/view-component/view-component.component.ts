@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactService } from 'src/app/Services/ContactServices/contact.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-component',
@@ -10,7 +11,7 @@ export class ViewComponentComponent implements OnInit {
   token:any;
   contactToView:any;
   viewedContacts:any;
-  constructor(private contactService:ContactService) { }
+  constructor(private contactService:ContactService,private route:Router) { }
 
   ngOnInit(): void {
     this.token=localStorage.getItem('token')
@@ -26,4 +27,10 @@ export class ViewComponentComponent implements OnInit {
     });
   })
   } 
+  addContactToMyList(){
+    this.contactService.addBookToWishList(this.contactToView,this.token).subscribe((response:any)=>{
+      console.log(response)
+      this.route.navigateByUrl('/home/myContacts')
+    })
+  }
 }

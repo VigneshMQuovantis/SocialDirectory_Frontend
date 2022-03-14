@@ -28,4 +28,11 @@ export class GetAllContactsComponent implements OnInit {
       console.log("viewPersonContactId", contactResponse.userId);
       this.route.navigateByUrl('/home/viewContacts/' + contactResponse.userId)
     }
+    
+    addContactToMyList(contactResponse:any){
+      this.contactService.addBookToWishList(contactResponse.userId,this.token).subscribe((response:any)=>{
+        console.log(response)
+        this.route.navigateByUrl('/home/myContacts')
+      })
+    }
 }

@@ -7,6 +7,7 @@ import { GetAllContactsComponent } from './Components/get-all-contacts/get-all-c
 import { MyProfileComponent } from './Components/my-profile/my-profile.component';
 import { SearchedContactsComponent } from './Components/searched-contacts/searched-contacts.component';
 import { ViewComponentComponent } from './Components/view-component/view-component.component';
+import { MyContactComponent } from './Components/my-contact/my-contact.component';
 
 const routes: Routes = [
   {path: '',   redirectTo: '/login', pathMatch: 'full'},
@@ -19,6 +20,7 @@ const routes: Routes = [
     {path:'myProfile', component:MyProfileComponent},
     {path:'searchedContacts', component:SearchedContactsComponent},
     {path:'viewContacts/:userId', component:ViewComponentComponent},
+    {path:'myContacts', component:MyContactComponent},
 ]}
 ];
 

@@ -4,7 +4,7 @@
         <div class="contact-container">
             <div class="iconContainer">
                 <mat-icon class="personIcon">person_outline</mat-icon>
-                <button class="addContact">Add Contact</button>
+                <button class="addContact" (click)="addContactToMyList()">Add Contact</button>
             </div>
             <div class="contact-contents">
                 <div class="name">Name<span>: {{viewedContacts?.name}}</span></div>
