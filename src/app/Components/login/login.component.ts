@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AccountService } from 'src/app/Services/AccountServices/account.service';
+import { NotificationServicesService } from 'src/app/Services/NotificationServices/notification-services.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,8 @@ import { AccountService } from 'src/app/Services/AccountServices/account.service
 export class LoginComponent implements OnInit {
   loginForm!:FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder,private accountService:AccountService,private route:Router) { }
+  constructor(private formBuilder: FormBuilder,private accountService:AccountService,private route:Router,
+    private notificationServices:NotificationServicesService) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -31,8 +33,17 @@ export class LoginComponent implements OnInit {
       }
       this.accountService.login(requestData).subscribe((response:any)=>{
         console.log(response)
-        localStorage.setItem('token',response.credentials.jwtToken)
-        this.route.navigateByUrl('/home')
+        if(response.success == true)
+        {
+          this.notificationServices.showNotification('Login Successful',' ',' ','Success');
+          localStorage.setItem('token',response.credentials.jwtToken)
+          this.route.navigateByUrl('/home')
+        }
+      },(error:Response)=>{
+        if(error.status == 404)
+        {
+          this.notificationServices.showNotification('Login Failed',' ','Email or Password wrong','Error');
+        }
       })
     }
     else

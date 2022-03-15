@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactService } from 'src/app/Services/ContactServices/contact.service';
 import { Router } from '@angular/router';
+import { NotificationServicesService } from 'src/app/Services/NotificationServices/notification-services.service';
 
 @Component({
   selector: 'app-get-all-contacts',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class GetAllContactsComponent implements OnInit {
   token:any;
   contactList:any;
-  constructor(private contactService:ContactService,private route:Router) { }
+  constructor(private contactService:ContactService,private route:Router,private notificationServices:NotificationServicesService) { }
 
   ngOnInit(): void {
     this.token=localStorage.getItem('token')
@@ -32,7 +33,16 @@ export class GetAllContactsComponent implements OnInit {
     addContactToMyList(contactResponse:any){
       this.contactService.addBookToWishList(contactResponse.userId,this.token).subscribe((response:any)=>{
         console.log(response)
-        this.route.navigateByUrl('/home/myContacts')
+        if(response.success == true)
+        {
+          this.route.navigateByUrl('/home/myContacts')
+          this.notificationServices.showNotification(response.myContacts.name,' ','Added to your list ','Success');
+        }
+      },(error:Response)=>{
+        if(error.status == 400)
+        {
+          this.notificationServices.showNotification('Contact Already in your list',' ','Visit my contact','Error');
+        }
       })
     }
 }

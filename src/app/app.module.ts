@@ -16,6 +16,8 @@ import { SearchedContactsComponent } from './Components/searched-contacts/search
 import { ViewComponentComponent } from './Components/view-component/view-component.component';
 import { MyContactComponent } from './Components/my-contact/my-contact.component';
 import { AuthenticationGuard } from './Components/authentication.guard';
+import { SnackbarComponentComponent } from './Components/snackbar-component/snackbar-component.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -27,12 +29,13 @@ import { AuthenticationGuard } from './Components/authentication.guard';
     MyProfileComponent,
     SearchedContactsComponent,
     ViewComponentComponent,
-    MyContactComponent
+    MyContactComponent,
+    SnackbarComponentComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,
     FormsModule,ReactiveFormsModule, BrowserAnimationsModule,AppRoutingModule,
-    MatIconModule,MatTooltipModule
+    MatIconModule,MatTooltipModule,MatSnackBarModule
   ],
   providers: [AuthenticationGuard],
   bootstrap: [AppComponent]

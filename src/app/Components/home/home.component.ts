@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ContactService } from 'src/app/Services/ContactServices/contact.service';
 import { DataServicesService } from 'src/app/Services/DataServices/data.service';
+import { NotificationServicesService } from 'src/app/Services/NotificationServices/notification-services.service';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
   submitted = false;
   token:any;
   constructor(private formBuilder: FormBuilder,private contactService:ContactService,private route:Router,
-    private dataServices:DataServicesService) { }
+    private dataServices:DataServicesService,private notificationServices:NotificationServicesService) { }
 
   ngOnInit(): void {
     this.searchContactForm = this.formBuilder.group({
@@ -48,5 +49,6 @@ export class HomeComponent implements OnInit {
     localStorage.removeItem('token')
     localStorage.removeItem('viewPersonContactId')
     this.route.navigateByUrl('/login')
+    this.notificationServices.showNotification('Logged Successfully',' ',' ','Success');    
   }
 }

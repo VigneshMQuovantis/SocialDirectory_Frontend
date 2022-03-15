@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AccountService } from 'src/app/Services/AccountServices/account.service';
+import { NotificationServicesService } from 'src/app/Services/NotificationServices/notification-services.service';
 
 @Component({
   selector: 'app-registration',
@@ -11,7 +12,8 @@ import { AccountService } from 'src/app/Services/AccountServices/account.service
 export class RegistrationComponent implements OnInit {
   registerForm!:FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder,private accountService:AccountService,private route:Router) { }
+  constructor(private formBuilder: FormBuilder,private accountService:AccountService,private route:Router,
+    public notificationServices:NotificationServicesService) { }
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
@@ -42,6 +44,10 @@ export class RegistrationComponent implements OnInit {
       }
       this.accountService.register(requestData).subscribe((response:any)=>{
         console.log(response)
+        if(response.success == true)
+        {
+          this.notificationServices.showNotification('Registration Successful',' ',' ','Success');
+        }
       })
     }
     else
