@@ -1,0 +1,71 @@
+.whole-container{
+    width: 1536px;
+    height: 653px;
+    overflow: hidden;
+    .headerContent{
+        font-size: 15pt;
+        font-family: Roboto;
+        margin-top: 20px;
+        margin-left: 185px;
+        .home{
+            cursor: pointer;
+        }
+    }
+    .display-contact{
+        margin-left: 185px;
+        margin-top: 20px;
+        .contact-container{
+            width: 940px;
+            height: 98px;
+            border-radius: 10px;
+            border: 1px solid #04849e;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            .iconContainer{
+                margin-left: 30px;
+                margin-top: 10px;
+                .personIcon{
+                    font-size: 50pt;
+                    color: #04849e;
+                    transform: translateY(-2px);
+                }
+            }
+            .name{
+                font-size: 15pt;
+                font-family: Roboto;
+                color: #04849e;
+                margin-top: -65px;
+                margin-left: 120px;
+                span{
+                    margin-left: 18px;
+                }
+            }
+            .location{
+                font-size: 13pt;
+                margin-top: 10px;
+                margin-left: 120px;
+                span{
+                    margin-left: 5px;
+                }
+            }
+            .viewContact{
+                margin-right: 3px;
+                border: none;
+                height: 30px;
+                cursor: pointer;
+                font-size: 13pt;
+                border-radius: 7px;
+                margin-top: 1px;
+                width: 940px;
+            }
+            .addedContacts{
+                margin-top: -70px;
+                margin-left: 750px;
+                color: #0bd991;
+                cursor: pointer;
+                font-size: 13pt;
+            }
+        }
+    }
+}

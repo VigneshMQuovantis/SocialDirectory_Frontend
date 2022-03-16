@@ -1,0 +1,13 @@
+<div class="whole-container">
+    <div class="headerContent"><span class="home" routerLink="/home/contacts">Home</span>/Notification</div>
+    <div class="display-contact">
+        <div class="contact-container" *ngFor="let response of contactList">
+            <div class="iconContainer"><mat-icon class="personIcon">person_outline</mat-icon></div>
+            <div class="name">Name<span>: {{response.name}}</span></div>
+            <div class="location">Location<span>: {{response.location}}</span></div>
+            <button class="viewContact" (click)="viewContact(response)">View Contact</button>
+            <span class="addedContacts">Added Your Contact</span>
+        </div>
+    </div>
+</div>
+

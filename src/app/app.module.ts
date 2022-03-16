@@ -18,6 +18,7 @@ import { MyContactComponent } from './Components/my-contact/my-contact.component
 import { AuthenticationGuard } from './Components/authentication.guard';
 import { SnackbarComponentComponent } from './Components/snackbar-component/snackbar-component.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MyNotificationsComponent } from './Components/my-notifications/my-notifications.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     SearchedContactsComponent,
     ViewComponentComponent,
     MyContactComponent,
-    SnackbarComponentComponent
+    SnackbarComponentComponent,
+    MyNotificationsComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,

@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { ContactService } from 'src/app/Services/ContactServices/contact.service';
 import { DataServicesService } from 'src/app/Services/DataServices/data.service';
 import { NotificationServicesService } from 'src/app/Services/NotificationServices/notification-services.service';
+import { Subscription } from 'rxjs';
+import { NotificationDataServiceService } from 'src/app/Services/NotificationDataService/notification-data-service.service';
 
 @Component({
   selector: 'app-home',
@@ -11,23 +13,23 @@ import { NotificationServicesService } from 'src/app/Services/NotificationServic
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  searchBoxSwitch : boolean=true;
   searchContactForm!:FormGroup;
+  subscription!: Subscription;
+  notificationCount:any;
   submitted = false;
   token:any;
   constructor(private formBuilder: FormBuilder,private contactService:ContactService,private route:Router,
-    private dataServices:DataServicesService,private notificationServices:NotificationServicesService) { }
+    private dataServices:DataServicesService,private notificationServices:NotificationServicesService,
+    private notificationDataService:NotificationDataServiceService) { }
 
   ngOnInit(): void {
+    this.subscription = this.notificationDataService.receivedData.subscribe(response => this.notificationCount = response.length)
     this.searchContactForm = this.formBuilder.group({
       searchContact: ['', Validators.required],
     });
     this.token=localStorage.getItem('token')
   }
-  searchBoxSwap() {
-    console.log(this.searchBoxSwitch);
-    return this.searchBoxSwitch === true ? (this.searchBoxSwitch = false) : (this.searchBoxSwitch = true);
-  }
+
   onSubmitted(){
     this.submitted=true;
     if(this.searchContactForm.value)

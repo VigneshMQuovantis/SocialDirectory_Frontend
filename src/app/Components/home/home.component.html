@@ -9,9 +9,10 @@
         <mat-icon class="topBarIconContent" matTooltip="Home"  routerLink="/home/contacts">home</mat-icon>
         <mat-icon class="topBarIconContent" matTooltip="My Profile" routerLink="/home/myProfile">account_circle</mat-icon>
         <mat-icon class="topBarIconContent" matTooltip="My Contacts" routerLink="/home/myContacts"> contacts</mat-icon>
-        <mat-icon class="topBarIconContent" matTooltip="Notification">notification_important</mat-icon>
+        <mat-icon class="topBarIconContent" matTooltip="Notification" routerLink="/home/myNotification">notification_important</mat-icon>
         <mat-icon class="topBarIconContent" matTooltip="Logout" (click)="logout()">logout</mat-icon>
     </div>
+    <div class="notificationCount">{{notificationCount}}</div>
 </div>
 <div>
     <router-outlet>

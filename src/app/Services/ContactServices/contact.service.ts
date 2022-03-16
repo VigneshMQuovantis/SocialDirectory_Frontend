@@ -75,4 +75,15 @@ export class ContactService {
     }
     return this.httpService.postRequest('/MyContact/'+data,false,true,header);
   }
+
+  getAllFriendRequest(data:any,token:any)
+  {
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization: 'Bearer '+ token
+      })
+    }
+    return this.httpService.getRequest('/MyContact/'+data,true,header);
+  }
 }

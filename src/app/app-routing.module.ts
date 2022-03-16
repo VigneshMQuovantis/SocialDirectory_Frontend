@@ -9,6 +9,7 @@ import { SearchedContactsComponent } from './Components/searched-contacts/search
 import { ViewComponentComponent } from './Components/view-component/view-component.component';
 import { MyContactComponent } from './Components/my-contact/my-contact.component';
 import { AuthenticationGuard } from './Components/authentication.guard';
+import { MyNotificationsComponent } from './Components/my-notifications/my-notifications.component';
 
 const routes: Routes = [
   {path: '',   redirectTo: '/login', pathMatch: 'full'},
@@ -22,6 +23,7 @@ const routes: Routes = [
     {path:'searchedContacts', component:SearchedContactsComponent},
     {path:'viewContacts/:userId', component:ViewComponentComponent},
     {path:'myContacts', component:MyContactComponent},
+    {path:'myNotification', component:MyNotificationsComponent}
 ]}
 ];
 

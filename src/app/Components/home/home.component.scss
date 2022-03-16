@@ -48,4 +48,16 @@
             cursor: pointer;
         }
     }
+    .notificationCount{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #FA3E3E;
+        border-radius: 50%;
+        color: #fff;
+        width: 16px;
+        height: 16px;
+        transform: translateX(-126px);
+        margin-top: 13px;
+    }
 }
