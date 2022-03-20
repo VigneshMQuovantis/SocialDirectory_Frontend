@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {HttpClientModule} from '@angular/common/http';
 import { GetAllContactsComponent } from './get-all-contacts.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 describe('GetAllContactsComponent', () => {
   let component: GetAllContactsComponent;
@@ -8,7 +10,8 @@ describe('GetAllContactsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GetAllContactsComponent ]
+      declarations: [ GetAllContactsComponent ],
+      imports: [HttpClientModule,RouterTestingModule,MatSnackBarModule]
     })
     .compileComponents();
   });
