@@ -1,36 +1,36 @@
-.whole-container{
+.view-whole-container{
     width: 1536px;
     height: 653px;
     overflow: hidden;
-    .headerContent{
+    .view-headerContent{
         font-size: 15pt;
         font-family: Roboto;
         margin-top: 20px;
         margin-left: 185px;
-        .home{
+        .view-home{
             cursor: pointer;
         }
     }
-    .display-contact{
+    .view-display-contact{
         display: grid;
         grid-template-columns: 300px 300px 300px 300px;
         grid-row-gap: 60px;
         margin-left: 185px;
         margin-top: 20px;
-        .contact-container{
+        .view-contact-container{
             width: 700px;
             height: 500px;
             border-radius: 10px;
             border: 1px solid #04849e;
             display: flex;
-            .iconContainer{
+            .view-iconContainer{
                 margin-left: 33px;
                 margin-top: 3px;
-                .personIcon{
+                .view-personIcon{
                     font-size: 90pt;
                     color: #04849e;
                 }
-                .addContact{
+                .view-addContact{
                     background-color: #04849e;
                     color: #fff;
                     border: none;
@@ -41,12 +41,12 @@
                     transform: translateY(10px);
                 }
             }
-            .contact-contents{
+            .view-contact-contents{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
                 margin-left: 60px;
-                .name{
+                .view-name{
                     font-size: 15pt;
                     font-family: Roboto;
                     color: #04849e;
@@ -55,7 +55,7 @@
                         margin-left: 87px;
                     }
                 }
-                .location{
+                .view-location{
                     font-size: 15pt;
                     font-family: Roboto;
                     color: #04849e;
@@ -64,7 +64,7 @@
                         margin-left: 65px;
                     }
                 }
-                .emailId{
+                .view-emailId{
                     font-size: 15pt;
                     font-family: Roboto;
                     color: #04849e;
@@ -73,7 +73,7 @@
                         margin-left: 75px;
                     }
                 }
-                .mobileNumber{
+                .view-mobileNumber{
                     font-size: 15pt;
                     font-family: Roboto;
                     color: #04849e;
@@ -82,7 +82,7 @@
                         margin-left: 3px;
                     }
                 }
-                .gender{
+                .view-gender{
                     font-size: 15pt;
                     font-family: Roboto;
                     color: #04849e;
@@ -91,7 +91,7 @@
                         margin-left: 77px;
                     }
                 }
-                .dateOfBirth{
+                .view-dateOfBirth{
                     font-size: 15pt;
                     font-family: Roboto;
                     color: #04849e;
@@ -100,7 +100,7 @@
                         margin-left: 29px;
                     }
                 }
-                .interest{
+                .view-interest{
                     font-size: 15pt;
                     font-family: Roboto;
                     color: #04849e;

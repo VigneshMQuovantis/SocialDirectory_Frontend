@@ -27,7 +27,7 @@ export class RegistrationComponent implements OnInit {
       location: ['', Validators.required]
     });
   }
-  onSubmitted(){
+  onSubmittedRegister(){
     this.submitted=true;
     if(this.registerForm.value)
     {
@@ -44,10 +44,7 @@ export class RegistrationComponent implements OnInit {
       }
       this.accountService.register(requestData).subscribe((response:any)=>{
         console.log(response)
-        if(response.success == true)
-        {
-          this.notificationServices.showNotification('Registration Successful',' ',' ','Success');
-        }
+        this.notificationServices.showNotification('Registration Successful',' ',' ','Success');
       })
     }
     else

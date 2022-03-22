@@ -34,7 +34,7 @@ export class MyNotificationsComponent implements OnInit {
     })
     }
 
-    viewContact(contactResponse:any){
+    viewNotificationContact(contactResponse:any){
       localStorage.setItem('viewPersonContactId', contactResponse.contactPersonId);
       console.log("viewPersonContactId", contactResponse.contactPersonId);
       this.route.navigateByUrl('/home/viewContacts/' + contactResponse.contactPersonId)

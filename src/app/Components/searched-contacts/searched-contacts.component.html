@@ -1,13 +1,13 @@
-<div class="whole-container">
-    <div class="headerContent"><span class="home" routerLink="/home/contacts">Home</span>/Searched Contacts</div>
-    <div class="display-contact">
-        <div class="contact-container" *ngFor="let response of searchContactList">
-            <div class="iconContainer"><mat-icon class="personIcon">person_outline</mat-icon></div>
-            <div class="name">{{response.name}}</div>
-            <div class="location">Location: {{response.location}}</div>
-            <div class="footer-buttons">
-                <button class="viewContact" (click)="viewContact(response)">View Contact</button>
-                <button class="addContact" (click)="addContactToMyList(response)">Add Contact</button>
+<div class="search-whole-container">
+    <div class="search-headerContent"><span class="search-home" routerLink="/home/contacts">Home</span>/Searched Contacts</div>
+    <div class="search-display-contact">
+        <div class="search-contact-container" *ngFor="let response of searchContactList">
+            <div class="search-iconContainer"><mat-icon class="search-personIcon">person_outline</mat-icon></div>
+            <div class="search-name">{{response.name}}</div>
+            <div class="search-location">Location: {{response.location}}</div>
+            <div class="search-footer-buttons">
+                <button class="search-viewContact" (click)="viewSearchContact(response)">View Contact</button>
+                <button class="search-addContact" (click)="addSearchedContactToMyList(response)">Add Contact</button>
             </div>
         </div>
     </div>

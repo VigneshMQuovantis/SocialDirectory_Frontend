@@ -1,23 +1,23 @@
-.whole-container{
+.search-whole-container{
     width: 1536px;
     height: 653px;
     overflow: hidden;
-    .headerContent{
+    .search-headerContent{
         font-size: 15pt;
         font-family: Roboto;
         margin-top: 20px;
         margin-left: 185px;
-        .home{
+        .search-home{
             cursor: pointer;
         }
     }
-    .display-contact{
+    .search-display-contact{
         display: grid;
         grid-template-columns: 300px 300px 300px 300px;
         grid-row-gap: 60px;
         margin-left: 185px;
         margin-top: 20px;
-        .contact-container{
+        .search-contact-container{
             width: 250px;
             height: 200px;
             border-radius: 10px;
@@ -25,31 +25,31 @@
             display: flex;
             align-items: center;
             flex-direction: column;
-            .iconContainer{
+            .search-iconContainer{
                 margin-left: -73px;
-                .personIcon{
+                .search-personIcon{
                     font-size: 70pt;
                     color: #04849e;
                 }
             }
-            .name{
+            .search-name{
                 font-size: 15pt;
                 font-family: Roboto;
                 color: #04849e;
             }
-            .location{
+            .search-location{
                 font-size: 13pt;
                 margin-top: 10px;
             }
-            .footer-buttons{
+            .search-footer-buttons{
                 margin-top: 10px;
-                .viewContact{
+                .search-viewContact{
                     margin-right: 3px;
                     border: none;
                     height: 30px;
                     cursor: pointer;
                 }
-                .addContact{
+                .search-addContact{
                     background-color: #04849e;
                     color: #fff;
                     border: none;

@@ -44,7 +44,6 @@ export class HomeComponent implements OnInit {
         this.route.navigateByUrl('/home/searchedContacts')
       })
     }
-    else
     console.log("invalid");
   }
   logout(){

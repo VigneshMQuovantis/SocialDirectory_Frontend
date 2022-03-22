@@ -64,7 +64,7 @@ export class ContactService {
     return this.httpService.deleteRequest('/MyContact/'+data,true,header);
   }
 
-  addBookToWishList(data:any,token:any)
+  addContact(data:any,token:any)
   {
     let header={
       headers:new HttpHeaders({

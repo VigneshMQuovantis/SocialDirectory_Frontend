@@ -1,12 +1,12 @@
-<div class="whole-container">
-    <div class="headerContent"><span class="home" routerLink="/home/contacts">Home</span>/My Contacts</div>
-    <div class="display-contact">
-        <div class="contact-container" *ngFor="let response of myContactList">
-            <div class="iconContainer"><mat-icon class="personIcon">person_outline</mat-icon></div>
-            <div class="name">Name<span>: {{response.name}}</span></div>
-            <div class="location">Location<span>: {{response.location}}</span></div>
-            <button class="viewContact" (click)="viewContact(response)">View Contact</button>
-            <mat-icon class="deleteIcon" (click)="removeContact(response)">delete</mat-icon>
+<div class="my-contact-whole-container">
+    <div class="my-contact-headerContent"><span class="home" routerLink="/home/contacts">Home</span>/My Contacts</div>
+    <div class="my-contact-display-contact">
+        <div class="my-contact-contact-container" *ngFor="let response of myContactList">
+            <div class="my-contact-iconContainer"><mat-icon class="my-contact-personIcon">person_outline</mat-icon></div>
+            <div class="my-contact-name">Name<span>: {{response.name}}</span></div>
+            <div class="my-contact-location">Location<span>: {{response.location}}</span></div>
+            <button class="my-contact-viewContact" (click)="viewMyContact(response)">View Contact</button>
+            <mat-icon class="my-contact-deleteIcon" (click)="removeMyContact(response)">delete</mat-icon>
         </div>
     </div>
 </div>

@@ -1,0 +1,6 @@
+projectKey=SocialDirectory_Frontend
+serverUrl=http://localhost:9050
+serverVersion=9.3.0.51899
+dashboardUrl=http://localhost:9050/dashboard?id=SocialDirectory_Frontend
+ceTaskId=AX-wk71eM7bPUy8hfz4L
+ceTaskUrl=http://localhost:9050/api/ce/task?id=AX-wk71eM7bPUy8hfz4L

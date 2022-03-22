@@ -10,8 +10,6 @@ describe('SnackbarComponentComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ SnackbarComponentComponent ],
       imports: [MatSnackBarModule],
-      
-
     })
     .compileComponents();
   });

@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 import { HttpService } from '../HttpServices/http.service';
-import { ActivatedRoute } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AccountService {
 
-  constructor(private httpService:HttpService,private activatedRoute:ActivatedRoute) { }
+  constructor(private httpService:HttpService) { }
   register(data:any)
   {
     let header={

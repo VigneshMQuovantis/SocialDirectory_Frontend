@@ -1,9 +1,9 @@
-.whole-container{
+.login-whole-container{
     width: 1536px;
     height: 713px;
     background-color: grey;
     overflow: hidden;
-    .form-content{
+    .login-form-content{
         background-color: #fff;
         display: flex;
         padding-top: 5px;
@@ -13,7 +13,7 @@
         border-radius: 5px;
         margin-top: 180px;
         margin-left: 500px;
-        .form-head{
+        .login-form-head{
             font: normal normal bold 24px/37px Roboto;
             letter-spacing: 0px;
             color: #04849e;
@@ -23,7 +23,7 @@
             padding-top: 20px;
             padding-left: 110px;
         }
-        .row-content{
+        .login-row-content{
             display: flex;
             flex-direction: row;
             margin-bottom: 10px;
@@ -36,66 +36,18 @@
                 opacity: 1;
                 font-family: vertical;
             }
-            .input{
+            .login-input{
                 width: 100%;
                 padding: 12px;
                 border: 1px solid #ccc;
                 border-radius: 4px;
                 resize: vertical;
             }
-            .gender-label-text-1{
-                transform: translateX(-70px);
-            }
-            .gender-label-text-2{
-                transform: translateX(-130px);
-            }
-            .input-radio-1{
-                width: 100%;
-                padding: 12px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                resize: vertical;
-                transform: translateX(-17px);
-            }
-            .input-radio-2{
-                width: 100%;
-                padding: 12px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                resize: vertical;
-                transform: translateX(-80px);
-            }
-            .date-input{
-                padding: 12px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-            }
-            input[type='date']
-            {
-                font: normal normal normal 16px Roboto;
-                color: #42515f;
-                background-color: transparent;
-            }
-            .name-lable{
-                padding-right: 60px;
-            }
-            .mobile-number-lable{
-                padding-right: 6px;
-            }
-            .date-of-birth-lable{
-                padding-right: 18px;
-            }
-            .emailId-lable{
+            .login-emailId-lable{
                 padding-right: 52px;
             }
-            .password-lable{
+            .login-password-lable{
                 padding-right: 37px;
-            }
-            .interest-lable{
-                padding-right: 52px;
-            }
-            .location-lable{
-                padding-right: 45px;
             }
             .createAccount{
                 font-size: 16pt;

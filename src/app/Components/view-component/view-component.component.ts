@@ -17,9 +17,9 @@ export class ViewComponentComponent implements OnInit {
   ngOnInit(): void {
     this.token=localStorage.getItem('token')
     this.contactToView=localStorage.getItem('viewPersonContactId')
-    this.getAllContacts()
+    this.getAllContactsForView()
   }
-  getAllContacts() { 
+  getAllContactsForView() { 
     this.contactService.getAllContacts(this.token).subscribe((response:any)=>{
       response.contacts.forEach((element: any) => {
         if (element.userId == this.contactToView) {
@@ -28,14 +28,11 @@ export class ViewComponentComponent implements OnInit {
     });
   })
   } 
-  addContactToMyList(){
-    this.contactService.addBookToWishList(this.contactToView,this.token).subscribe((response:any)=>{
+  addViewedContactToMyList(){
+    this.contactService.addContact(this.contactToView,this.token).subscribe((response:any)=>{
       console.log(response)
-      if(response.success == true)
-        {
-          this.route.navigateByUrl('/home/myContacts')
+      this.route.navigateByUrl('/home/myContacts')
           this.notificationServices.showNotification(response.myContacts.name,' ','Added to your list ','Success');
-        }
     },(error:Response)=>{
       if(error.status == 400)
       {

@@ -1,14 +1,14 @@
-<div class="whole-container">
-    <div class="headerContent"><span class="home" routerLink="/home/contacts">Home</span>/My Profile</div>
-    <div class="display-contact">
-        <div class="contact-container" *ngFor="let response of myProfileDetails">
-            <div class="name">Name<span>: {{response.name}}</span></div>
-            <div class="dateOfBirth">Date of Birth<span>: {{response.dateOfBirth}}</span></div>
-            <div class="gender">Gender<span>: {{response.gender}}</span></div>
-            <div class="emailId">EmailId<span>: {{response.emailId}}</span></div>
-            <div class="mobileNumber">Mobile Number<span>: {{response.mobileNumber}}</span></div>
-            <div class="interest">Interest<span>: {{response.interest}}</span></div>
-            <div class="location">Location<span>: {{response.location}}</span></div>
+<div class="my-profile-whole-container">
+    <div class="my-profile-headerContent"><span class="my-profile-home" routerLink="/home/contacts">Home</span>/My Profile</div>
+    <div class="my-profile-display-contact">
+        <div class="my-profile-contact-container" *ngFor="let response of myProfileDetails">
+            <div class="my-profile-name">Name<span>: {{response.name}}</span></div>
+            <div class="my-profile-dateOfBirth">Date of Birth<span>: {{response.dateOfBirth}}</span></div>
+            <div class="my-profile-gender">Gender<span>: {{response.gender}}</span></div>
+            <div class="my-profile-emailId">EmailId<span>: {{response.emailId}}</span></div>
+            <div class="my-profile-mobileNumber">Mobile Number<span>: {{response.mobileNumber}}</span></div>
+            <div class="my-profile-interest">Interest<span>: {{response.interest}}</span></div>
+            <div class="my-profile-location">Location<span>: {{response.location}}</span></div>
         </div>
     </div>
 </div>

@@ -11,10 +11,6 @@ export class HttpService {
   {
     return this.httpClient.post(this.BackendBaseUrl+url,data,token && httpOptions);
   }
-  putRequest(url:any,data:any,token:boolean=true,httpOptions:any)
-  {
-    return this.httpClient.put(this.BackendBaseUrl+url,data,token && httpOptions);
-  }
   getRequest(url:any,token:boolean=true,httpOptions:any)
   {
     return this.httpClient.get(this.BackendBaseUrl+url,token && httpOptions);

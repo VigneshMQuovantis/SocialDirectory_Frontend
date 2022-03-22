@@ -33,12 +33,9 @@ export class LoginComponent implements OnInit {
       }
       this.accountService.login(requestData).subscribe((response:any)=>{
         console.log(response)
-        if(response.success == true)
-        {
-          this.notificationServices.showNotification('Login Successful',' ',' ','Success');
+        this.notificationServices.showNotification('Login Successful',' ',' ','Success');
           localStorage.setItem('token',response.credentials.jwtToken)
           this.route.navigateByUrl('/home')
-        }
       },(error:Response)=>{
         if(error.status == 404)
         {

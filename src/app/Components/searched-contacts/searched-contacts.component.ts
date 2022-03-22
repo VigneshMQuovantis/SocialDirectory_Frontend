@@ -20,14 +20,14 @@ export class SearchedContactsComponent implements OnInit {
     console.log(this.searchContactList)
     this.token=localStorage.getItem('token')
   }
-  addContactToMyList(contactResponse:any){
-    this.contactService.addBookToWishList(contactResponse.userId,this.token).subscribe((response:any)=>{
+  addSearchedContactToMyList(contactResponse:any){
+    this.contactService.addContact(contactResponse.userId,this.token).subscribe((response:any)=>{
       console.log(response)
       this.route.navigateByUrl('/home/myContacts')
     })
   }
 
-  viewContact(contactResponse:any){
+  viewSearchContact(contactResponse:any){
     localStorage.setItem('viewPersonContactId', contactResponse.userId);
     console.log("viewPersonContactId", contactResponse.userId);
     this.route.navigateByUrl('/home/viewContacts/' + contactResponse.userId)

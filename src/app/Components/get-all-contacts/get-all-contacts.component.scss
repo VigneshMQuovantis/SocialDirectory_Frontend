@@ -1,23 +1,23 @@
-.whole-container{
+.get-whole-container{
     width: 1536px;
     height: 653px;
     overflow: hidden;
-    .headerContent{
+    .get-headerContent{
         font-size: 15pt;
         font-family: Roboto;
         margin-top: 20px;
         margin-left: 185px;
-        .home{
+        .get-home{
             cursor: pointer;
         }
     }
-    .display-contact{
+    .get-display-contact{
         display: grid;
         grid-template-columns: 300px 300px 300px 300px;
         grid-row-gap: 60px;
         margin-left: 185px;
         margin-top: 20px;
-        .contact-container{
+        .get-contact-container{
             width: 250px;
             height: 200px;
             border-radius: 10px;
@@ -25,31 +25,31 @@
             display: flex;
             align-items: center;
             flex-direction: column;
-            .iconContainer{
+            .get-iconContainer{
                 margin-left: -73px;
-                .personIcon{
+                .get-personIcon{
                     font-size: 70pt;
                     color: #04849e;
                 }
             }
-            .name{
+            .get-name{
                 font-size: 15pt;
                 font-family: Roboto;
                 color: #04849e;
             }
-            .location{
+            .get-location{
                 font-size: 13pt;
                 margin-top: 10px;
             }
-            .footer-buttons{
+            .get-footer-buttons{
                 margin-top: 10px;
-                .viewContact{
+                .get-viewContact{
                     margin-right: 3px;
                     border: none;
                     height: 30px;
                     cursor: pointer;
                 }
-                .addContact{
+                .get-addContact{
                     background-color: #04849e;
                     color: #fff;
                     border: none;

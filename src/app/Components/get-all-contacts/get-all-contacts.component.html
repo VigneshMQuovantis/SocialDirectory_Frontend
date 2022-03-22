@@ -1,13 +1,13 @@
-<div class="whole-container">
-    <div class="headerContent"><span class="home">Home</span>/Contacts</div>
-    <div class="display-contact">
-        <div class="contact-container" *ngFor="let response of contactList">
-            <div class="iconContainer"><mat-icon class="personIcon">person_outline</mat-icon></div>
-            <div class="name">{{response.name}}</div>
-            <div class="location">Location: {{response.location}}</div>
-            <div class="footer-buttons">
-                <button class="viewContact" (click)="viewContact(response)">View Contact</button>
-                <button class="addContact" (click)="addContactToMyList(response)">Add Contact</button>
+<div class="get-whole-container">
+    <div class="get-headerContent"><span class="get-home">Home</span>/Contacts</div>
+    <div class="get-display-contact">
+        <div class="get-contact-container" *ngFor="let response of contactList">
+            <div class="get-iconContainer"><mat-icon class="get-personIcon">person_outline</mat-icon></div>
+            <div class="get-name">{{response.name}}</div>
+            <div class="get-location">Location: {{response.location}}</div>
+            <div class="get-footer-buttons">
+                <button class="get-viewContact" (click)="viewContact(response)">View Contact</button>
+                <button class="get-addContact" (click)="addContactToMyList(response)">Add Contact</button>
             </div>
         </div>
     </div>

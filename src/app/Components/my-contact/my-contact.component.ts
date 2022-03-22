@@ -25,14 +25,14 @@ export class MyContactComponent implements OnInit {
     })
     } 
 
-    viewContact(contactResponse:any){
+    viewMyContact(contactResponse:any){
       localStorage.setItem('viewPersonContactId', contactResponse.contactPersonId);
       console.log("viewPersonContactId", contactResponse.contactPersonId);
       this.route.navigateByUrl('/home/viewContacts/' + contactResponse.contactPersonId)
       this.notificationServices.showNotification(contactResponse.name,' ','Contact Details and Informations','Success');
     }
 
-    removeContact(contactResponse:any){
+    removeMyContact(contactResponse:any){
       this.contactService.deleteContact(contactResponse.contactPersonId,this.token).subscribe((response:any)=>{
         console.log(response)
         window.location.reload();
