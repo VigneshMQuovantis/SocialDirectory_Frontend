@@ -19,4 +19,8 @@ export class HttpService {
   {
     return this.httpClient.delete(this.BackendBaseUrl+url,token && httpOptions);
   }
+  putRequest(url:any,data:any,token:boolean=true,httpOptions:any)
+  {
+    return this.httpClient.put(this.BackendBaseUrl+url,data,token && httpOptions);
+  }
 }

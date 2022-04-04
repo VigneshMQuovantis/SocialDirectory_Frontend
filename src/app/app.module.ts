@@ -19,7 +19,8 @@ import { AuthenticationGuard } from './Components/authentication.guard';
 import { SnackbarComponentComponent } from './Components/snackbar-component/snackbar-component.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { MyNotificationsComponent } from './Components/my-notifications/my-notifications.component';
-
+import { UpdateMyProfileComponent } from './Components/update-my-profile/update-my-profile.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -34,12 +35,13 @@ import { MyNotificationsComponent } from './Components/my-notifications/my-notif
     ViewComponentComponent,
     MyContactComponent,
     SnackbarComponentComponent,
-    MyNotificationsComponent
+    MyNotificationsComponent,
+    UpdateMyProfileComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,
     FormsModule,ReactiveFormsModule, BrowserAnimationsModule,AppRoutingModule,
-    MatIconModule,MatTooltipModule,MatSnackBarModule
+    MatIconModule,MatTooltipModule,MatSnackBarModule,MatDialogModule
   ],
   providers: [AuthenticationGuard],
   bootstrap: [AppComponent]

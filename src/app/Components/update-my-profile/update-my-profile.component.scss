@@ -1,0 +1,88 @@
+
+    .my-profile-contact-container{
+        width: 550px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .my-profile-name{
+            font-size: 15pt;
+            font-family: Roboto;
+            color: #04849e;
+            margin-top: 15px;
+            margin-left: 30px;
+            span{
+                margin-left: 87px;
+               
+            }
+
+        }
+        .my-profile-location{
+            font-size: 15pt;
+            margin-top: 10px;
+            font-family: Roboto;
+            color: #04849e;
+            margin-left: 30px;
+            span{
+                margin-left: 65px;
+            }
+        }
+        .my-profile-emailId{
+            font-size: 15pt;
+            margin-top: 10px;
+            font-family: Roboto;
+            color: #04849e;
+            margin-left: 30px;
+            span{
+                margin-left: 75px;
+            }
+        }
+        .my-profile-mobileNumber{
+            font-size: 15pt;
+            margin-top: 10px;
+            font-family: Roboto;
+            color: #04849e;
+            margin-left: 30px;
+            span{
+                margin-left: 3px;
+            }
+        }
+        .my-profile-gender{
+            font-size: 15pt;
+            margin-top: 10px;
+            font-family: Roboto;
+            color: #04849e;
+            margin-left: 30px;
+            span{
+                margin-left: 77px;
+            }
+        }
+        .my-profile-dateOfBirth{
+            font-size: 15pt;
+            margin-top: 10px;
+            font-family: Roboto;
+            color: #04849e;
+            margin-left: 30px;
+            span{
+                margin-left: 29px;
+            }
+        }
+        .my-profile-interest{
+            font-size: 15pt;
+            margin-top: 10px;
+            font-family: Roboto;
+            color: #04849e;
+            margin-left: 30px;
+            span{
+                margin-left: 73px;
+            }
+        }
+        .my-profile-update-profile-button{
+            border: none;
+            height: 40px;
+            cursor: pointer;
+            font-size: 13pt;
+            background-color: #04849e;
+            color: #ffff;
+        }
+    }

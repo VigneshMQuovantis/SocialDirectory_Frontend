@@ -29,4 +29,16 @@ export class AccountService {
     }
     return this.httpService.postRequest('/User/login',data,false,header);
   }
+
+  updateProfile(data:any,token:any)
+  {
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization: 'Bearer '+ token
+        
+      })
+    }
+    return this.httpService.putRequest('/User',data,true,header);
+  }
 }
